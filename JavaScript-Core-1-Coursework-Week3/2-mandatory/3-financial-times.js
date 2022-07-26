@@ -59,12 +59,12 @@ function headlinesWithNumbers(allArticleTitles) {
 function averageNumberOfCharacters(allArticleTitles) {
   // TODO
   const newArray = allArticleTitles;
-  let totalCharecter = 0;
+  let totalCharacter = 0;
   let avg = 0;
   for (const art of newArray) {
-    totalCharecter += art.length;
+    totalCharacter += art.length;
   }
-  avg = totalCharecter / newArray.length;
+  avg = totalCharacter / newArray.length;
   return Math.round(avg);
 }
 
