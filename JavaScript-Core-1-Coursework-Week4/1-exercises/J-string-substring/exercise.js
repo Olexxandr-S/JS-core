@@ -6,11 +6,12 @@
 
 let statement = "I like programming and dogs";
 
-statement = statement.substring(0, 18);
+statement = statement.substring();
 
 console.log(statement);
 
 /* EXPECTED OUTPUT 
+
   "I like programming"
   
 */

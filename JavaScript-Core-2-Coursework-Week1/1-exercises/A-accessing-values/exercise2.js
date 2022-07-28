@@ -7,7 +7,7 @@
 let capitalCities = {
   UnitedKingdom: "London",
   China: "Beijing",
-  Peru: "Lima",
+  Peru: "Lima"
 };
 
 /*
@@ -17,10 +17,12 @@ let capitalCities = {
 */
 
 let myCountry = "UnitedKingdom";
-let myCapitalCity = capitalCities[myCountry]; // or We can use ['UnitedKingdom'] if we don't want to assign it to a variable
+let myCapitalCity; // complete the code
 
 console.log(myCapitalCity);
 
 /* EXPECTED RESULT
+
   London
+
 */

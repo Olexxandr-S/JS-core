@@ -11,11 +11,10 @@ let footballClubs = {
   ac_milan: "Italy",
 };
 
-let clubNames = [];
-clubNames = Object.keys(footballClubs);
-/* todo */
+let clubNames =
+  /* todo */
 
-// DO NOT EDIT BELOW THIS LINE
-console.log(
-  `Expected value: chelsea_fc, fc_barcelona, ac_milan. Actual value: ${clubNames}`
-);
+  // DO NOT EDIT BELOW THIS LINE
+  console.log(
+    `Expected value: chelsea_fc, fc_barcelona, ac_milan. Actual value: ${clubNames}`
+  );

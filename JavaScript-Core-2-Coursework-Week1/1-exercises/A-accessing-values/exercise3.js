@@ -21,10 +21,12 @@ let basketballTeam = {
 */
 
 // write code here
-let players = basketballTeam.topPlayers.forEach((e) => console.log(e));
+
 
 /* EXPECTED RESULT
+
   Dennis Rodman
   Michael Jordan
   Scottie Pippen
+
 */

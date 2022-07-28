@@ -6,7 +6,7 @@
 let student = {
   name: "Reshma Saujani",
   examScore: 65,
-  hasPassed: false,
+  hasPassed: false
 };
 
 /*
@@ -16,8 +16,6 @@ let student = {
 */
 
 // write code here
-student.attendance = 90;
-console.log(student);
 
 /*
   - Write an "if" statement that changes the value of hasPassed to true
@@ -28,14 +26,16 @@ console.log(student);
 */
 
 // write code here
-student.hasPassed = student.attendance >= 90 && student.examScore >= 60;
+
 console.log(student);
 
 /* EXPECTED RESULT
+
   {
     name: "Reshma Saujani",
     examScore: 65,
     hasPassed: true,
     attendance: 90
   }
+
 */

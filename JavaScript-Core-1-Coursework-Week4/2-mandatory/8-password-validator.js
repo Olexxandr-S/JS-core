@@ -23,7 +23,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwordsArray) {}
+function validatePasswords(passwords) {}
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
