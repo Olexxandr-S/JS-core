@@ -33,19 +33,29 @@ const CLOSING_PRICES_LAST_5_DAYS_FOR_ALL_STOCKS = [
         Solve the smaller problems, and then build those solutions back up to solve the larger problem.
         Functions can help with this!
 */
+
+// function getAveragePrices(closingPricesForAllStocks) {
+//   let result = [];
+//   for (const stockPrices of closingPricesForAllStocks) {
+//     let total = 0;
+//     let avg = 0;
+//     for (const price of stockPrices) {
+//       total += price;
+//     }
+//     avg = Math.round((total / stockPrices.length) * 100) / 100;
+//     result.push(avg);
+//   }
+//   return result;
+//   // TODO
+// }
+
 function getAveragePrices(closingPricesForAllStocks) {
   let result = [];
   for (const stockPrices of closingPricesForAllStocks) {
-    let total = 0;
-    let avg = 0;
-    for (const price of stockPrices) {
-      total += price;
-    }
-    avg = Math.round((total / stockPrices.length) * 100) / 100;
+    let avg = stockPrices.reduce((a, b) => a + b, 0) / stockPrices.length;
     result.push(avg);
   }
   return result;
-  // TODO
 }
 
 /*
