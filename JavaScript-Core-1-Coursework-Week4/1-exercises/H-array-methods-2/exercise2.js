@@ -6,7 +6,6 @@
   For example, capitailise("hello") should return "Hello"
   Tip: use the string method .split() and the array method .join()
 */
-
 function capitalise(str) {}
 
 /* 
