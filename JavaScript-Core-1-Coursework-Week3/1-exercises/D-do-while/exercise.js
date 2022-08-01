@@ -10,7 +10,10 @@ function evenNumbersSum(n) {
   let i = 0;
   let sum = 0;
   do {
-    sum += i * 2;
+    sum += i * 2; // hm, cool! this intersting algoritmic colution!
+                  // this approach is much meore effective than
+                  // just iterating through all even numbers 
+                  // like in evenNumbers()
     i++;
   } while (i < n);
   return sum;

@@ -52,7 +52,8 @@ const CLOSING_PRICES_LAST_5_DAYS_FOR_ALL_STOCKS = [
 function getAveragePrices(closingPricesForAllStocks) {
   let result = [];
   for (const stockPrices of closingPricesForAllStocks) {
-    let avg = stockPrices.reduce((a, b) => a + b, 0) / stockPrices.length;
+    let avg = stockPrices.reduce((a, b) => a + b, 0) / stockPrices.length;  // oh, this is really cool using Array.reduce() method here! 
+                                                                            // nice catch!
     result.push(avg);
   }
   return result;
@@ -71,12 +72,12 @@ function getAveragePrices(closingPricesForAllStocks) {
 function getPriceChanges(closingPricesForAllStocks) {
   let range = [];
 
-  let myArr = closingPricesForAllStocks;
-  for (let brand of myArr) {
+  let myArr = closingPricesForAllStocks; // you don't need this
+  for (let brand of myArr) {             // this is not 'brand', that's 'stockPrices' :)
     let dif = 0;
     dif = brand[brand.length - 1] - brand[0];
-    let rounded = Math.round(dif * 100) / 100;
-    range = [...range, rounded];
+    let rounded = Math.round(dif * 100) / 100; // nice :)
+    range = [...range, rounded];        // use Array.push() here
   }
   return range;
 }
@@ -94,20 +95,34 @@ function getPriceChanges(closingPricesForAllStocks) {
     The price should be shown with exactly 2 decimal places.
 */
 function highestPriceDescriptions(closingPricesForAllStocks, stocks) {
-  let myArr = closingPricesForAllStocks;
+  let myArr = closingPricesForAllStocks; // not needed
   let message = "";
   let sortedArray = [];
-  let newArr = [];
-  for (let brand of myArr) {
+  let newArr = [];                      // better call it 'result'
+  for (let brand of myArr) {            // better rename 'brand' --> 'stockPrices'
     brand = brand.sort((a, b) => b - a);
-    sortedArray = [...sortedArray, brand];
+    sortedArray = [...sortedArray, brand]; // use Arrary.push() here
+                                           // and you can push and sort in one line.
   }
-  for (let i = 0; i < stocks.length; i++) {
+
+  for (let i = 0; i < stocks.length; i++) { // if you started to use Array.sort() and Array.reduce(), 
+                                            // then you shoudl know about Array.forEach() that you could use here
+                                            // 
+                                            // and this can be done in the same loop as above, 
+                                            // you don't really need two for loops. coz 
+                                            // closingPricesForAllStocks.length and stocks.length must be be equal.
+
     let highestRounded = sortedArray[i][0].toFixed(2);
+    
     message = `The highest price of ${stocks[
       i
     ].toUpperCase()} in the last 5 days was ${highestRounded}`;
-    newArr = [...newArr, message];
+    // this is not a common practice to write the code this way.
+    // better try this:
+            // message = `The highest price of ${stocks[i].toUpperCase()} ` +
+            //           `in the last 5 days was ${highestRounded}`;
+
+    newArr = [...newArr, message]; // use Array.push();
   }
   return newArr;
 }

@@ -9,9 +9,12 @@ function potentialHeadlines(allArticleTitles) {
   let choosenArticles = [];
   for (const item of allArticleTitles) {
     if (item.length <= 65) {
+      // pavel: using Array.push() method would be better practice here :)
       choosenArticles = [...choosenArticles, item];
     }
   }
+  // pavel: if function returns something, then 'console.log' look like someone 
+  // missed to clean up their rubbish after themselves :)
   console.log(choosenArticles);
   return choosenArticles;
 }
@@ -34,19 +37,29 @@ function titleWithFewestWords(allArticleTitles) {
 */
 function headlinesWithNumbers(allArticleTitles) {
   // TODO
-  const arr = allArticleTitles;
+  const arr = allArticleTitles; // there is no point to 'copy' array this way.
+                                // if you really need its copy use spread operator:
+                                // onst allArticleTitlesCopy = [...allArticleTitles];
   let newArt = [];
 
   const numbers = "1234567890";
   for (const sentence of arr) {
     let target = "";
+    
+    // can you check RegExp in JS, and replace everything you do inside 'for-loop' with 
+    // one-line code using regexp?
     for (const num of numbers) {
       if (sentence.includes(num)) {
-        target = sentence;
+        target = sentence;  // if you do this
+                            // and then check target.lengh below
+                            // and that's only purpose of 'target' in your code
+                            // then you don't really need 'target' at all.
+                            // you can use 'sentence' without creating 'target' variable.
       }
     }
+
     if (target.length !== 0) {
-      newArt = [...newArt, target];
+      newArt = [...newArt, target]; // use Array.push() method here.
     }
   }
   return newArt;
@@ -58,14 +71,17 @@ function headlinesWithNumbers(allArticleTitles) {
 */
 function averageNumberOfCharacters(allArticleTitles) {
   // TODO
-  const newArray = allArticleTitles;
+  const newArray = allArticleTitles;  // this is not a new array :) 
+                                      // this is phisically the same array 
+                                      // but in another variable name.
   let totalCharacter = 0;
   let avg = 0;
   for (const art of newArray) {
     totalCharacter += art.length;
   }
-  avg = totalCharacter / newArray.length;
-  return Math.round(avg);
+  avg = totalCharacter / newArray.length; // looks like you don;t really need this variable at all
+  return Math.round(avg);                 // you can return AVG value straigh away:
+                                          // return Math.round(totalCharacter / newArray.length);
 }
 
 /* ======= List of Articles - DO NOT MODIFY ===== */

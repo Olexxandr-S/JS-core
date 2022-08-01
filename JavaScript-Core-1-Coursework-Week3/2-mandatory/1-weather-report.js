@@ -14,12 +14,15 @@
 function getTemperatureReport(cities) {
   // TODO
   let myArray = [];
+  // pavel: it would be better to have variable name `myArray` more meantingful, `messages` for example.
   let message = "";
   for (const city of cities) {
     message = `The temperature in ${city} is ${temperatureService(
       city
     )} degrees`;
-    myArray = [...myArray, message];
+    myArray = [...myArray, message]; 
+    // pavel: using Array.push() method would work faster here, hence better performance
+    
   }
   return myArray;
 }

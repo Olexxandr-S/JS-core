@@ -15,6 +15,10 @@ let tubeStations = [
 let str = "codeyourfuture";
 let otherStr = "";
 for (let i of str) {
+  // pavel: i usually represents 'iterator' or 'counter' 
+  // and assumed to be a numeric value.
+  // in our case here, this is rather an element, e.g. Character of a string.
+  // i'd suggest to call it 'c' or 'char' or even 'letter'
   otherStr += i;
   console.log(i.toUpperCase());
 }
