@@ -15,6 +15,18 @@ let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 function items(array) {
   return array === null;
 }
+
+// pavel: 
+// functin name should always include some action work (verb)
+// it always answers the question: "do what?" .... -> "do this...."
+// and words are written in camel case:
+// - doSomething()
+// - createSomething()
+// - hasSomthing()
+// alternatively, as per naming convention for functions it can be 
+// - isSomthing()
+// for this task, the best name would be isNull()
+
 if (pairsByIndex.some(items) === true) {
   process.exit(1);
 }

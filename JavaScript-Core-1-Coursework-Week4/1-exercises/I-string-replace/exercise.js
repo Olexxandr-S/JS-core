@@ -19,6 +19,8 @@ let result = story
   .replace("great", "brilliant")
   .replace("10", "100000");
 
+// pavel: cool! well done!
+
 /* EXPECTED OUTPUT */
 
 const util = require("util");
