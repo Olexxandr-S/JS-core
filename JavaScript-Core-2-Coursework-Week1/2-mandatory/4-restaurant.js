@@ -19,6 +19,8 @@ const MENU = {
   falafel: 7.25,
 };
 
+// pavel: this is good! well done. 
+// further refactoring improvement could be replacing if-else with ternary operator :)
 let cashRegister = {
   orderBurger: function (balance) {
     if (balance >= MENU.burger) return balance - MENU.burger;

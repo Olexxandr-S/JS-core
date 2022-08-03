@@ -14,6 +14,9 @@ let student = {
 };
 
 student.getName("Mohammad Alamin");
+// pavel: to be honest, the best name for this method would be 'printName()' 
+// as it doesn;t get it from anywhere, it just prints it on the console :) 
+// but i appreciate that's not you Alex, who decided to call it this name.
 
 /* EXPECTED RESULT
   Student name: Daniel

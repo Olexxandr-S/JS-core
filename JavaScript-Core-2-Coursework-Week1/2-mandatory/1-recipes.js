@@ -65,8 +65,19 @@ const recipe = [
 ];
 // write code here
 
+
+// pavel: it's all good. Well done.
+// it will be absolutely fantastic if 
+// - we have name 'recipe' in plural: 'recipes' :)
+// - for each recipe object 'Ingredients' starts with small 'i', as all other property names
+// - couple other meangful improvements mentioned below:
 recipe.forEach(function (e) {
+  //                    ^^^ it'll look better if we do it this way: 
+  //                          recipes.forEach((recipe) => .... );
   console.log(`\n${e.title.toUpperCase()}\nServes: ${e.serves}\nIngredients:`);
-  e.Ingredients.forEach((a) => console.log(a));
-  console.log(e.origin);
+  e.Ingredients.forEach((a) => console.log(`- ${a}`));
+  //                    ^^^ it'll look better if we do it this more explicit way: 
+  //                          recipe.ingredients.forEach((ingredient) => .... );
+  //                     this massively increases the code readability.
+  console.log(e.origin); // <-- what is this? do we print it if it's not set?
 });

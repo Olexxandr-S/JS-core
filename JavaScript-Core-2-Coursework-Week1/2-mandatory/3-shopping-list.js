@@ -17,15 +17,25 @@ let pantry = {
   fridgeContents: ["butter", "milk"],
   cupboardContents: ["salt", "tinned tomatoes", "oregano"],
 };
+
 // let recipe2 = {
 //   name: "margherita pizza",
 //   ingredients: ["flour", "salt", "yeast", "tinned tomatoes", "oregano", "mozarella"],
 // };
+
 function createShoppingList(recipe) {
   let inFlat = pantry.fridgeContents.concat(pantry.cupboardContents);
+  //   ^^^ English speaking people might not be able to clearly read it
+  //       and in general it might be more meaningfull to call it something lile:
+  //        - allIngridients
+  //        - ingridientsStock
+  //        - stock
+  
   newObject = {
+  // ^^^ better name wo this would be 'result'
     name: recipe.name,
     items: recipe.ingredients.filter(function (e) {
+  //                                          ^^^ better name for this would be 'ingredient'
       return !inFlat.includes(e);
     }),
   };

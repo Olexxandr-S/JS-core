@@ -26,6 +26,13 @@ let capitalCities = {
 capitalCities.UnitedKingdom.population = 8980000;
 capitalCities.China.population = 21500000;
 capitalCities["Peru"] = { name: "Lima", population: 9750000 };
+// pavel: just for your reference
+// we can set new value simply like this:
+//    capitalCities.Peru = { name: "Lima", population: 9750000 };
+// but if "Peru" value is a value of some dynamic variable, then yes 
+// we should assign the new Object's property with the 'bracket notation':
+//     let country = "Peru";
+//     capitalCities[country] = { name: "Lima", population: 9750000 };
 
 console.log(capitalCities);
 
