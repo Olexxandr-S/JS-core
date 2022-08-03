@@ -17,6 +17,9 @@
 
 function getSettlers(familyColonise) {
   return familyColonise.filter((x) => x.includes("family") && x[0] === "A");
+  //                                                          ^^^^
+  //                                                         replace this with String.startsWith("A")
+  //                                                         / pavel :) /
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

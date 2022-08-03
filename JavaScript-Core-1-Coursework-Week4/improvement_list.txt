@@ -1,0 +1,8 @@
+- naming convention for variables and functions
+- Array methods
+  -- forEach
+  -- filter
+  -- map
+  
+- String methods
+  -- substring

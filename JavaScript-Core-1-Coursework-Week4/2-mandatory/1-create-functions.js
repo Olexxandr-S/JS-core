@@ -36,7 +36,9 @@ Write a function that:
 - Returns a new array containing the same elements, but without the element at the passed index.
 */
 
-function remove(array, index) {}
+function remove(array, index) {
+  // pavel: no implementation? :)
+}
 
 /*
 Write a function that:
@@ -49,7 +51,7 @@ Write a function that:
 function formatPercentage(arrayOfNumbers) {
   return arrayOfNumbers
     .map((number) => (number > 100 ? 100 : number))
-
+    // pavel: can we do it in just one Array.map() method? if there are 10 mln numbers, you gonna 'map' through them twice - not good :)
     .map((number) => {
       return Math.round(number * 100) / 100 + "%";
     });
