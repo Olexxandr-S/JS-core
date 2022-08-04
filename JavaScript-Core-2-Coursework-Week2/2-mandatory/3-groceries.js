@@ -34,6 +34,18 @@ for (let days in weeklyMealPlan) {
     }
   }
 }
+// pavel:
+// there is a better way of doing the same, than having that nested for-loop: you caould use Array.flatMap() method:
+// 1. get values from the 'weeklyMealPlan'
+// 2. call flatMap() method on the result:
+//    Object.values(weeklyMealPlan).flatMap(.... you call back here....).sort();
+//                                                    ^^^                 ^^^ this is optional sorting
+//                                                     | 
+//                                                please check on MDN and experiment with this
+// when you get the result out of that, you'll notice, it has duplicates.
+// in order to get rid of duplicates, you can use 'Set' data structure,
+// and then convert it back to 'Array' again if necessary.
+// all of that will make the code much more better readable ;)
 
 /*
 Exercise 2:
@@ -48,6 +60,11 @@ for (let grocery of weeklyMealPlan.saturday) {
     weekendGroceriesToBuy.push(grocery);
   }
 }
+// pavel:
+// well, i would argure about this approach. 
+// why only 'Saturday' ? 
+// what if we have something on 'Sunday' as well?
+
 /*
 Exercise 3:
   Loop through your weekly meal plan:
@@ -64,11 +81,16 @@ let numberOfItemsPerWeek = {
   saturday: 0,
   sunday: 0,
 };
+
 for (let day in weeklyMealPlan) {
   let ingredients = weeklyMealPlan[day];
   let count = ingredients.length;
   numberOfItemsPerWeek[day] = count;
 }
+
+// pavel.
+// don't worry, everything is fine here with the 'numberOfItemsPerWeek'! 
+// good job! :)
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 5-groceries.js`

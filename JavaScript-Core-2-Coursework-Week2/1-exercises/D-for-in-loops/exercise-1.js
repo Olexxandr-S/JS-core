@@ -14,10 +14,15 @@ let salaries = {
 
 // WRITE BELOW THIS LINE
 for (let salary in salaries) {
+  //      ^^^ this looks more like 'person' rather than 'salary' :)
   if (salaries[salary] > 50000) {
     console.log(`${salary} : $${salaries[salary]}`);
   }
 }
+
+// but you could do it even more beautifully by using Object.entries() method + destructuring an Array:
+// for (let [name, salary] of Object.entries(salaries)) { ... }
+// pavel.
 
 // Expected Result:
 // monica: $55000

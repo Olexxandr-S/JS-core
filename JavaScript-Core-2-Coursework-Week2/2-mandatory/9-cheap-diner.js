@@ -23,6 +23,34 @@ function chooseMeal(mealArray) {
   if (mealArray.length === 0) return "Nothing :(";
   if (mealArray.length === 1) return mealArray[0].name;
   mealArray.sort((a, b) => a.price - b.price); // Sorting in JavaScript can be weird; this arrow function passed to ".sort" will sort from lowest to highest.
+                                               /**
+                                                * pavel: haha :)
+                                                * well, have a look into this page: https://www.javascripttutorial.net/javascript-array-sort/
+                                                * it explances how the sorting function works under the hood.
+                                                * then you can refer to this page: 
+                                                * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+                                                * 
+                                                * there is default callback inside Array.sort() method,
+                                                * but you can overide it with your custom callback, 
+                                                * for instance if you want to sort the below array of objects by their 'weight' property:
+                                                * const animals = [
+                                                *   {name: "cat", weight: 2.6},
+                                                *   {name: "dog", weight: 7.2},
+                                                *   {name: "snake", weight: 1.5}
+                                                * ];
+                                                * animals.sort(); ---> how does 'sort()' know whether you wanna sort it by animals name or weight?
+                                                * 
+                                                * // sort by weight in Ascending order:
+                                                * animals.sort((a, b) => a.weight - b.weight);
+                                                * 
+                                                * // sort by weight in Descending order:
+                                                * animals.sort((a, b) => b.weight - a.weight);
+                                                * 
+                                                * - If compare(a,b) is less than zero, the sort() method sorts a to a lower index than b. In other words, a will come first.
+                                                * - If compare(a,b) is greater than zero, the sort() method sort b to a lower index than a, i.e., b will come first.
+                                                * - If compare(a,b) returns zero, the sort() method considers a equals b and leaves their positions unchanged.
+                                                */
+  
   let secondCheapestMeal = mealArray[1];
   return secondCheapestMeal.name;
 }

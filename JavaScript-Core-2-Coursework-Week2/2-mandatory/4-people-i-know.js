@@ -382,6 +382,9 @@ for (let friend of friends) {
     thirtyFiveOrOlder.push(friend);
   }
 }
+// pavel.
+// 'friends' is an Array, isn't?
+// why not to use Array.filter() method? 
 
 /*
 3) Find the email address
@@ -395,6 +398,11 @@ for (let friend of friends) {
   }
 }
 
+// pavel.
+// 'friends' is an Array, isn't?
+// why not to use Array.filter() method? 
+// and then map() result to 'friend.email' :)
+
 /*
 4) colleagues with "Stacie Villarreal"
 Next, I want you to find all of my friends who are colleagues of Stacie Villarreal.
@@ -403,7 +411,7 @@ This time, I only want the full names ("<firstname> <lastname>") of my friends w
 */
 
 let friendsWhoAreColleaguesOfStacie = [];
-for (let friend of friends) {
+for (let friend of friends) { // pavel: please get rid of for-loop, try using array methods ;)
   friend.colleagues.forEach(function ({ name }) {
     if (name.includes("Stacie Villarreal")) {
       friendsWhoAreColleaguesOfStacie.push(
@@ -421,7 +429,7 @@ This time, I only want the full names of the people who can multitask
 */
 
 let colleaguesWhoCanMultitask = [];
-for (let friend of friends) {
+for (let friend of friends) { // pavel: please get rid of for-loop, try using array methods ;)
   friend.colleagues.forEach(function ({ name, skills }) {
     if (skills.includes("Multi-tasking")) {
       colleaguesWhoCanMultitask.push(name);

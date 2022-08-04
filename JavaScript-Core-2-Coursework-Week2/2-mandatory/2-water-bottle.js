@@ -53,6 +53,7 @@ Extra question:
 
 // Write you answer to the question here
 // If in case we change the object name later, we don't have to change it in every line again.
+// pavel: yup! absolutely! :)
 
 /*
 Once you have completed your object run the following 

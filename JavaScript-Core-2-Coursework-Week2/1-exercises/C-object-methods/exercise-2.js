@@ -17,7 +17,10 @@ let myPets = {
 };
 
 let petNames = [...Object.values(myPets)];
-/* todo */
+//              ^^^ there is no need to do that.
+//  you could simply assign 'petNames' to the 'Object.values(myPets)'
+//  Object.values() method returns a "new" Array.
+// pavel.
 
 // DO NOT EDIT BELOW THIS LINE
 console.log(
