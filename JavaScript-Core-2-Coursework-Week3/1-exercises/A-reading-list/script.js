@@ -1,26 +1,57 @@
 function readingList(books) {
   // Write your code here...
   let contain = document.querySelectorAll("#content");
-  console.log(contain[0]);
+  //                                       ^^^ this is an ID for the html element.
+  //                                           by the rule, an html page should have only unique IDs
+  //                                           if this is not the case, then that's an issue and must be fixed
+  //                                           so, having said thed, you should use another selector, 
+  //                                           the one, that returns a single html element instead of collection:
+  //                                           let content = querySelector("#content");
+  // pavel.
+  console.log(contain[0]); // don't forget to clean up unnecessary console.log() lines after you finished with debugging,
+                           // or, debug it with dev-tools by putting break points :)
+  
   let mylist = document.createElement("ul");
+  //   ^^^ nobody knows what you intend to put into 'yourList' 
+  //       unless you name it in more self-descriptive way: 'listOfBooks'
+  
   contain[0].appendChild(mylist);
+  //   ^^^ this supposed to be just 'content', after you follow the first comment above :)
 
   books.forEach((book) => {
     let myUlist = document.createElement("li");
+    //   ^^^ you can call it 'bookLi' or 'bookElement' or just simply 'li'
+
     let myNewParagraph = document.createElement("p");
+    //   ^^^ better call it 'bookCaption' or 'caption' or 'header' (meaning "caption" or "header" for the Book Element on the page)
+    
     let myNewImage = document.createElement("img");
+    //   ^^^ better call it 'bookCoverImage' or 'bookImage' or coverImage
+
     myUlist.appendChild(myNewParagraph);
     myUlist.appendChild(myNewImage);
     mylist.appendChild(myUlist);
+    
     myNewParagraph.innerText = `${book.title} by ${book.author}`;
     myNewImage.src = book.bookCoverImage;
+    
     if (book.alreadyRead) {
       myUlist.classList.add("back-ground-colour--read");
+      //                          ^^^ there is no such class in style.css, so we can't see effect of it
+      //                              i can only see .red class in css.
+      //                              so, you might want use it for unread books and create .green or something for the read books :)
     } else {
       myUlist.classList.add("back-ground-colour--unread");
     }
   });
 }
+
+// pavel:
+// overall comment: the logic if fine.
+// only improvements neeed in naming variables, for "cleaner code".
+// names for variables and functions should be self-descriptive.
+// please read through this: https://github.com/ryanmcdermott/clean-code-javascript
+// and you'll also find there many more useful suggestions and best practices there :)
 
 const books = [
   {
