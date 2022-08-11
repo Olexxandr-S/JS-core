@@ -29,6 +29,13 @@ for (let shape in shapes) {
     shapesWithMoreThanFiveSides.push(shape);
   }
 }
+
+// pavel:
+// this looks ok, no problem at all.
+// also, as an alternative more, more readable and more professional code 
+// will look like below (similar to the previous exerscise):
+//    for (let [shape, numOfSides] of Object.entries(shapes)) { ... }
+
 // DO NOT EDIT BELOW THIS LINE
 console.log(
   `Expected output: pentagon, triacontagon, hecatontagon, megagon. Actual output: ${shapesWithMoreThanFiveSides}`

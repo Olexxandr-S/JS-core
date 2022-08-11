@@ -62,6 +62,7 @@ Exercise 1:
 function logAllWriters() {
   // write your code to log all writers here
   writers.forEach((x) =>
+  //              ^^^ remember "Clean Code"? this should be a 'writer' instead of 'x' :)
     console.log(
       `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old, and work as a ${x.occupation}.`
     )
@@ -79,7 +80,9 @@ function logDeadWritersInTheirForties() {
   // write your code here
 
   writers
-    .filter((x) => x.age >= 40 && x.age < 50 && !x.alive)
+    .filter((x) => x.age >= 40 && x.age < 50 && !x.alive) // same here, 'writer'
+                                                          // or, if you wanna make a joke, call it 'deadMan' :-D
+                                                          // this is still much more self-explanatory than just 'x' :-)
     .forEach((x) =>
       console.log(
         `Writer ${x.firstName} ${x.lastName} died at ${x.age} years old.`

@@ -31,6 +31,13 @@ function journeyPlanner(locations, transportMode) {
   return possibleLocations;
 }
 
+// pavel.
+// this is ok. works fine and is still basically readable.
+// you can go ahead one more step and make it even better using this:
+//    return Object.entries(locations)
+//        .filter( ... )
+//        .map( ... );
+
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 3-journey-planner.js`
 - To run all exercises/tests in the mandatory folder, run `npm test`

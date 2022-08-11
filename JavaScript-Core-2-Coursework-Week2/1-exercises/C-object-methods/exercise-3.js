@@ -14,6 +14,10 @@ let highScores = {
 
 let highScoreKeys = Object.keys(highScores); /* todo */
 let highScoreValues = Object.values(highScores); /* todo */
+//                                                  ^^^ if this has been done, you should delete it :) 
+//                                                      stick to the "Clean Code" principle :))
+//                                                      https://github.com/ryanmcdermott/clean-code-javascript
+// pavel.
 
 // DO NOT EDIT BELOW THIS LINE
 console.log(`Expected keys: 34, 55, 89, 100, Actual keys: ${highScoreKeys}`);

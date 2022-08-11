@@ -17,6 +17,10 @@ function getBudgets(peopleArray) {
   }
   return sum;
 }
+// pavel:
+// this is ok, and basically readbility is ok too.
+// just for training purpose, could you please do the same with Array.reduce() method?
+// thanks :)
 
 /* ======= TESTS - DO MODIFY (!!!) =====
 - To run the tests for this exercise, run `npm test -- --testPathPattern 9-budgets.js`

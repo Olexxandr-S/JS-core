@@ -108,6 +108,10 @@ let rooms = {
   },
 };
 
+// pavel: 
+// how about this challenge?
+// i'd suggest completing it in OOP JS ;)
+
 /*
 YOU ARE NOT EXPECTED TO UNDERSTAND THE CODE BELOW THIS 
 LINE!
