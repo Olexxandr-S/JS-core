@@ -26,21 +26,28 @@ Exercise 1:
   The weeklyGroceriesToBuy array shouldn't contain any repeating items.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [];
-for (let days in weeklyMealPlan) {
-  for (let grocery of weeklyMealPlan[days]) {
-    if (!weeklyGroceriesToBuy.includes(grocery)) {
-      weeklyGroceriesToBuy.push(grocery);
-    }
-  }
-}
+
+// let weeklyGroceriesToBuy = [];
+// for (let days in weeklyMealPlan) {
+//   for (let grocery of weeklyMealPlan[days]) {
+//     if (!weeklyGroceriesToBuy.includes(grocery)) {
+//       weeklyGroceriesToBuy.push(grocery);
+//     }
+//   }
+// }
+
+// oh this is so cool!
+let weeklyGroceriesToBuy = [
+  ...new Set(Object.values(weeklyMealPlan).flatMap((meal) => meal)),
+];
+
 // pavel:
 // there is a better way of doing the same, than having that nested for-loop: you caould use Array.flatMap() method:
 // 1. get values from the 'weeklyMealPlan'
 // 2. call flatMap() method on the result:
 //    Object.values(weeklyMealPlan).flatMap(.... you call back here....).sort();
 //                                                    ^^^                 ^^^ this is optional sorting
-//                                                     | 
+//                                                     |
 //                                                please check on MDN and experiment with this
 // when you get the result out of that, you'll notice, it has duplicates.
 // in order to get rid of duplicates, you can use 'Set' data structure,
@@ -61,8 +68,8 @@ for (let grocery of weeklyMealPlan.saturday) {
   }
 }
 // pavel:
-// well, i would argure about this approach. 
-// why only 'Saturday' ? 
+// well, i would argure about this approach.
+// why only 'Saturday' ?
 // what if we have something on 'Sunday' as well?
 
 /*

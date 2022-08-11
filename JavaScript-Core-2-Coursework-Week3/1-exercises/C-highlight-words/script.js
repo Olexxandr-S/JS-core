@@ -1,30 +1,29 @@
 const content = document.querySelector("#content");
 
-function highlightWords(paragraph, colours) {
+function highlightWords(paragraph, colors) {
   // Write your code here...
-  let paragraphEl = document.createElement(`p`);
+  let paragraphElement = document.createElement(`p`);
   //    ^^^ better call it 'paragraphElement' or just simply 'p' :)
-  
-  let selectedColor = document.createElement(`select`);
-  //    ^^^ better reserver this variable name for some JS internal variable, like 'currentColour' below.
-  //        and call this one as 'selectColor' or 'colorSelect'
-  
-  colours.forEach((element) => {
-    //              ^^^ better call it 'color'
-    
-    let option = document.createElement(`option`); // oh, 'option' is perfectly fine here
-                                                   // alternative names could be: 'colorOption' or 'colorSelectOption'
-                                                   // but, as long as we have only one 'select' element on our page, 
-                                                   // 'option' doesn't look vague or ambiguous here, so is still good :)
-    option.innerText = element;
-    
-    selectedColor.appendChild(option);
-    // ^^^ yeah, as stated above, 
-    // 'selectedColor' is the value of the 'option' that user chooses from the 'select' element.
 
+  let currentColor = document.createElement(`select`);
+  //    ^^^ better reserver this variable name for some JS internal variable, like 'currentColor' below.
+  //        and call this one as 'selectColor' or 'colorSelect'
+
+  colors.forEach((color) => {
+    //              ^^^ better call it 'color'
+
+    let option = document.createElement(`option`); // oh, 'option' is perfectly fine here
+    // alternative names could be: 'colorOption' or 'colorSelectOption'
+    // but, as long as we have only one 'select' element on our page,
+    // 'option' doesn't look vague or ambiguous here, so is still good :)
+    option.innerText = color;
+
+    currentColor.appendChild(option);
+    // ^^^ yeah, as stated above,
+    // 'selectedColor' is the value of the 'option' that user chooses from the 'select' element.
   });
 
-  content.append(selectedColor, paragraphEl);
+  content.append(currentColor, paragraphElement);
 
   const words = paragraph.split(" ");
   words.forEach((word) => {
@@ -37,16 +36,17 @@ function highlightWords(paragraph, colours) {
       //      ^^^ you have it already in the global variable 'selectedColor' (which must be renamed :))
       //          so no need to do the same again. reuse that blobal variable.
 
-      const currentColour =
+      const currentColor =
         selectMenu.value === `none` ? `white` : selectMenu.value;
 
       // pavel:
       // well, there is one more thing needs to be done as per task:
       // "....or highlighting should be removed if the clicked word is already highlighted"
+      // but we have none color value
 
-      spanElement.style.backgroundColor = currentColour;
+      spanElement.style.backgroundColor = currentColor;
     });
-    paragraphEl.appendChild(spanElement);
+    paragraphElement.appendChild(spanElement);
   });
 }
 

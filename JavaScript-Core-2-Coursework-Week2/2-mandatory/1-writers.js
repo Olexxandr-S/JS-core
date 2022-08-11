@@ -61,10 +61,10 @@ Exercise 1:
 */
 function logAllWriters() {
   // write your code to log all writers here
-  writers.forEach((x) =>
-  //              ^^^ remember "Clean Code"? this should be a 'writer' instead of 'x' :)
+  writers.forEach((writer) =>
+    //              ^^^ remember "Clean Code"? this should be a 'writer' instead of 'x' :)
     console.log(
-      `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old, and work as a ${x.occupation}.`
+      `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`
     )
   );
 }
@@ -80,12 +80,12 @@ function logDeadWritersInTheirForties() {
   // write your code here
 
   writers
-    .filter((x) => x.age >= 40 && x.age < 50 && !x.alive) // same here, 'writer'
-                                                          // or, if you wanna make a joke, call it 'deadMan' :-D
-                                                          // this is still much more self-explanatory than just 'x' :-)
-    .forEach((x) =>
+    .filter((writer) => writer.age >= 40 && writer.age < 50 && !writer.alive) // same here, 'writer'
+    // or, if you wanna make a joke, call it 'deadMan' :-D
+    // this is still much more self-explanatory than just 'x' :-)
+    .forEach((writer) =>
       console.log(
-        `Writer ${x.firstName} ${x.lastName} died at ${x.age} years old.`
+        `Writer ${writer.firstName} ${writer.lastName} died at ${writer.age} years old.`
       )
     );
 }
@@ -99,10 +99,10 @@ Exercise 3:
 function logAliveWritersInTheirForties() {
   // write your code here
   return writers
-    .filter((x) => x.age >= 40 && x.age < 50 && x.alive)
-    .forEach((x) =>
+    .filter((writer) => writer.age >= 40 && writer.age < 50 && writer.alive)
+    .forEach((writer) =>
       console.log(
-        `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old.`
+        `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`
       )
     );
 }

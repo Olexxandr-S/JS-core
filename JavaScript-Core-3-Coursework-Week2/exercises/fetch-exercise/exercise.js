@@ -24,7 +24,7 @@ fetch("https://codeyourfuture.herokuapp.com/api/greetings")
     return response.text();
   })
   .then(function (greeting) {
-    console.log(greeting);
+    //console.log(greeting);
     // ^^^ always remeber to clean up these console-logs from your code, if they don't bring any business value
     // and they usualy don't, in 99.999% of cases ;)
     // otherwise, your boss might be unhappy to see it in the project every here and there :)

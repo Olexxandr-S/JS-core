@@ -13,10 +13,10 @@ let salaries = {
 };
 
 // WRITE BELOW THIS LINE
-for (let salary in salaries) {
+for (let [name, salary] of Object.entries(salaries)) {
   //      ^^^ this looks more like 'person' rather than 'salary' :)
-  if (salaries[salary] > 50000) {
-    console.log(`${salary} : $${salaries[salary]}`);
+  if (salary > 50000) {
+    console.log(`${name} : $${salary}`);
   }
 }
 

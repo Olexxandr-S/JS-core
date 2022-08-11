@@ -12,9 +12,9 @@ let highScores = {
   100: ["David"],
 };
 
-let highScoreKeys = Object.keys(highScores); /* todo */
-let highScoreValues = Object.values(highScores); /* todo */
-//                                                  ^^^ if this has been done, you should delete it :) 
+let highScoreKeys = Object.keys(highScores);
+let highScoreValues = Object.values(highScores);
+//                                                  ^^^ if this has been done, you should delete it :)
 //                                                      stick to the "Clean Code" principle :))
 //                                                      https://github.com/ryanmcdermott/clean-code-javascript
 // pavel.

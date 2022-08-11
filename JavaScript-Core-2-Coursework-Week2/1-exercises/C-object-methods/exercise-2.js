@@ -8,7 +8,6 @@
 
 */
 
-l
 let myPets = {
   dog: "Rufus",
   cat: "Mr Fluffykins",
@@ -16,7 +15,7 @@ let myPets = {
   rabbit: "Bugs",
 };
 
-let petNames = [...Object.values(myPets)];
+let petNames = Object.values(myPets);
 //              ^^^ there is no need to do that.
 //  you could simply assign 'petNames' to the 'Object.values(myPets)'
 //  Object.values() method returns a "new" Array.

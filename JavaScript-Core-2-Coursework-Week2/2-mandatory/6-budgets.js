@@ -10,13 +10,19 @@ getBudgets([
 Should give return the answer of 62600.
 **/
 
+// function getBudgets(peopleArray) {
+//   let sum = 0;
+//   for (let people of peopleArray) {
+//     sum += people.budget;
+//   }
+//   return sum;
+// }
+
 function getBudgets(peopleArray) {
-  let sum = 0;
-  for (let people of peopleArray) {
-    sum += people.budget;
-  }
+  let sum = peopleArray.reduce((sum, people) => sum + people.budget, 0);
   return sum;
 }
+
 // pavel:
 // this is ok, and basically readbility is ok too.
 // just for training purpose, could you please do the same with Array.reduce() method?

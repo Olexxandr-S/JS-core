@@ -24,15 +24,15 @@ let shapes = {
 let shapesWithMoreThanFiveSides = [];
 
 // WRITE YOUR CODE BELOW THIS LINE
-for (let shape in shapes) {
-  if (shapes[shape] >= 5) {
+for (let [shape, numOfSides] of Object.entries(shapes)) {
+  if (numOfSides >= 5) {
     shapesWithMoreThanFiveSides.push(shape);
   }
 }
 
 // pavel:
 // this looks ok, no problem at all.
-// also, as an alternative more, more readable and more professional code 
+// also, as an alternative more, more readable and more professional code
 // will look like below (similar to the previous exerscise):
 //    for (let [shape, numOfSides] of Object.entries(shapes)) { ... }
 

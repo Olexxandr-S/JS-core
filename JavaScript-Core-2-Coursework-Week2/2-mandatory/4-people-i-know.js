@@ -376,31 +376,36 @@ const friends = [
 In the above object you can see my friends and the colleagues of my friends.
 First, I want you to find all of my friends who are 35 or older.
 */
-let thirtyFiveOrOlder = [];
-for (let friend of friends) {
-  if (friend.age >= 35) {
-    thirtyFiveOrOlder.push(friend);
-  }
-}
+// let thirtyFiveOrOlder = [];
+// for (let friend of friends) {
+//   if (friend.age >= 35) {
+//     thirtyFiveOrOlder.push(friend);
+//   }
+// }
+
+let thirtyFiveOrOlder = friends.filter((friend) => friend.age >= 35);
+
 // pavel.
 // 'friends' is an Array, isn't?
-// why not to use Array.filter() method? 
+// why not to use Array.filter() method?
 
 /*
 3) Find the email address
 Next, I want you to find all of my friends who work for "POWERNET" and then store their emails in the array below
 */
 
-let powerNetEmails = [];
-for (let friend of friends) {
-  if (friend.company === `POWERNET`) {
-    powerNetEmails.push(friend.email);
-  }
-}
-
+// let powerNetEmails = [];
+// for (let friend of friends) {
+//   if (friend.company === `POWERNET`) {
+//     powerNetEmails.push(friend.email);
+//   }
+// }
+let powerNetEmails = friends
+  .filter((friend) => friend.company === `POWERNET`)
+  .map((friend) => friend.email);
 // pavel.
 // 'friends' is an Array, isn't?
-// why not to use Array.filter() method? 
+// why not to use Array.filter() method?
 // and then map() result to 'friend.email' :)
 
 /*
@@ -411,15 +416,16 @@ This time, I only want the full names ("<firstname> <lastname>") of my friends w
 */
 
 let friendsWhoAreColleaguesOfStacie = [];
-for (let friend of friends) { // pavel: please get rid of for-loop, try using array methods ;)
+// pavel: please get rid of for-loop, try using array methods ;)
+friends.map((friend) =>
   friend.colleagues.forEach(function ({ name }) {
     if (name.includes("Stacie Villarreal")) {
       friendsWhoAreColleaguesOfStacie.push(
         `${friend.name.first} ${friend.name.last}`
       );
     }
-  });
-}
+  })
+);
 
 /*
 5) Find "Multi-tasking" colleagues
@@ -429,13 +435,15 @@ This time, I only want the full names of the people who can multitask
 */
 
 let colleaguesWhoCanMultitask = [];
-for (let friend of friends) { // pavel: please get rid of for-loop, try using array methods ;)
+
+// pavel: please get rid of for-loop, try using array methods ;)
+friends.map((friend) =>
   friend.colleagues.forEach(function ({ name, skills }) {
     if (skills.includes("Multi-tasking")) {
       colleaguesWhoCanMultitask.push(name);
     }
-  });
-}
+  })
+);
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 - To run the tests for this exercise, run `npm test -- --testPathPattern 6-people-I-know.js`
