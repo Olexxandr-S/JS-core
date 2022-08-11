@@ -23,12 +23,10 @@ const MENU = {
 // further refactoring improvement could be replacing if-else with ternary operator :)
 let cashRegister = {
   orderBurger: function (balance) {
-    if (balance >= MENU.burger) return balance - MENU.burger;
-    else return balance;
+    (balance >= MENU.burger) ? balance - MENU.burger : balance;
   },
   orderFalafel: function (balance) {
-    if (balance >= MENU.falafel) return balance - MENU.falafel;
-    else return balance;
+    (balance >= MENU.falafel) ? balance - MENU.falafel : balance;
   },
 };
 // let c = cashRegister.orderFalafel(5)

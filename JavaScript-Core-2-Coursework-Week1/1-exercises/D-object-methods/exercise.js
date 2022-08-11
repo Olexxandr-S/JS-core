@@ -8,14 +8,14 @@
 */
 
 let student = {
-  getName: function (name) {
+  printName: function (name) {
     console.log(`Student name: ${name}`);
   },
 };
 
-student.getName("Mohammad Alamin");
-// pavel: to be honest, the best name for this method would be 'printName()' 
-// as it doesn;t get it from anywhere, it just prints it on the console :) 
+student.printName("Mohammad Alamin");
+// pavel: to be honest, the best name for this method would be 'printName()'
+// as it doesn;t get it from anywhere, it just prints it on the console :)
 // but i appreciate that's not you Alex, who decided to call it this name.
 
 /* EXPECTED RESULT

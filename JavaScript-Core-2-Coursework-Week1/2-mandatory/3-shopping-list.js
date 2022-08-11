@@ -24,22 +24,22 @@ let pantry = {
 // };
 
 function createShoppingList(recipe) {
-  let inFlat = pantry.fridgeContents.concat(pantry.cupboardContents);
+  let allIngredients = pantry.fridgeContents.concat(pantry.cupboardContents);
   //   ^^^ English speaking people might not be able to clearly read it
   //       and in general it might be more meaningfull to call it something lile:
   //        - allIngridients
   //        - ingridientsStock
   //        - stock
-  
-  newObject = {
-  // ^^^ better name wo this would be 'result'
+
+  result = {
+    // ^^^ better name wo this would be 'result'
     name: recipe.name,
-    items: recipe.ingredients.filter(function (e) {
-  //                                          ^^^ better name for this would be 'ingredient'
-      return !inFlat.includes(e);
+    items: recipe.ingredients.filter(function (ingredient) {
+      //                                          ^^^ better name for this would be 'ingredient'
+      return !allIngredients.includes(ingredient);
     }),
   };
-  return newObject;
+  return result;
 }
 
 // console.log(createShoppingList(recipe2))

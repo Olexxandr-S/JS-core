@@ -14,19 +14,24 @@ let names = [
   "Arron Graham",
 ];
 
-names[0] = names[0].substring(" ", names.length);
-names[1] = names[1].substring(" ", names.length);
-names[2] = names[2].substring(" ", names.length);
-names[3] = names[3].substring(" ", names.length);
-names[4] = names[4].substring(" ", names.length);
-// pavel: 
+// names[0] = names[0].substring(" ", names.length);
+// names[1] = names[1].substring(" ", names.length);
+// names[2] = names[2].substring(" ", names.length);
+// names[3] = names[3].substring(" ", names.length);
+// names[4] = names[4].substring(" ", names.length);
+// pavel:
 // no-no, this is crepy-ugly way of doing it.
-// less ugly way would be doing something like this: 
+// less ugly way would be doing something like this:
 //    let name = "Tamzin Lindsay";
 //    name.substring(0, name.indexOf(" "));
 // but, could you please try using Array.map and String.split() methods instead?
 
-names.forEach((name) => {
+const newNames = names.map((fullName) => {
+  const name = fullName.split(" ");
+  return name[0];
+});
+
+newNames.forEach((name) => {
   console.log(name);
 });
 

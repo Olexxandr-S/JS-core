@@ -5,7 +5,7 @@
 let students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 let group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-function onlyStudentElements(singlePersonInGroup) {
+function isStudent(singlePersonInGroup) {
   return students.includes(singlePersonInGroup);
 }
 
@@ -13,10 +13,10 @@ function onlyStudentElements(singlePersonInGroup) {
 // only minor suggestion is for the name of the callBack function:
 // i'd rathe suggest renaming 'onlyStudentElements' to 'isStudent()'
 //
-// logically, what we are doing here is: we are literally checking that 
+// logically, what we are doing here is: we are literally checking that
 // every person in the group is a student.
 
-let groupIsOnlyStudents = group.every(onlyStudentElements); // complete this statement
+let groupIsOnlyStudents = group.every(isStudent); // complete this statement
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");

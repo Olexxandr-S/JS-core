@@ -18,21 +18,21 @@ const COUNTRY_CURRENCY_CODES = [
 ];
 
 function createLookup(countryCurrencyCodes) {
-  let newObject = {};
+  let result = {};
   //    ^^^ call it 'result'
   for (let i = 0; i < countryCurrencyCodes.length; i++) {
-    let arr0 = countryCurrencyCodes[i][0];
+    let countryCode = countryCurrencyCodes[i][0];
     //  ^^^ this is actually countryCode
-    let arr1 = countryCurrencyCodes[i][1];
+    let currencyCode = countryCurrencyCodes[i][1];
     //  ^^^ this is actually currencyCode
-    newObject[arr0] = arr1;
+    result[countryCode] = currencyCode;
   }
-  return newObject;
+  return result;
   // can also be done by following method with one line code
-  // return Object.fromEntries(COUNTRY_CURRENCY_CODES) 
+  // return Object.fromEntries(COUNTRY_CURRENCY_CODES)
   // fromEntries object method worked for this assignment
-  
-  // pavel: yeah, absolutely! 
+
+  // pavel: yeah, absolutely!
   // Object.fromEntries(countryCurrencyCodes) is the best solution.
   // if not that one, then the next candidate is Array.reduce() method
   // countryCurrencyCodes.reduce((result, [countryCode, currencyCode]) => Object.assign(result, {[countryCode]: currencyCode}), {});

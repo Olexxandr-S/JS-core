@@ -13,14 +13,13 @@
 
 function findSafeOxygenLevel(planetWithOxygen) {
   return planetWithOxygen.find(
-    (x) =>
-      x[x.length - 1] == "%" && parseFloat(x) > 19.5 && parseFloat(x) < 23.5
-   //   ^^^^^^^^^^^^^
-   //         |
-   //    replace this with
-   //     String.endsWith("%")
-   // the rest is OK :)
-   // pavel.
+    (x) => x.endsWith("%") && parseFloat(x) > 19.5 && parseFloat(x) < 23.5
+    //   ^^^^^^^^^^^^^
+    //         |
+    //    replace this with
+    //     String.endsWith("%")
+    // the rest is OK :)
+    // pavel.
   );
 }
 

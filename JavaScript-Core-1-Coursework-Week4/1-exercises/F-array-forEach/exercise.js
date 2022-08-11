@@ -12,13 +12,16 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 // arr.forEach(element => console.log(element), arr % 5 === 0 ? Buzz : arr % 15 === 0 ? FizzBuzz:);
 arr.forEach((number) => {
   if (number % 15 === 0) {
-    return console.log("FizzBuzz"); // pavel: we never return anything from Array.forEach() method.
-  } else if (number % 3 === 0) {    // this method basically replaces for-loop :)
-    return console.log("Fizz");     // console.log() doesn't return anything either
-  } else if (number % 5 === 0) {    // so we could just simply 'console.log()' here without 'return'
-    return console.log("Buzz");
+    console.log("FizzBuzz"); // pavel: we never return anything from Array.forEach() method.
+  } else if (number % 3 === 0) {
+    // this method basically replaces for-loop :)
+    console.log("Fizz"); // console.log() doesn't return anything either
+  } else if (number % 5 === 0) {
+    // so we could just simply 'console.log()' here without 'return'
+    console.log("Buzz");
+  } else {
+    console.log(number);
   }
-  console.log(number);
 });
 
 /* EXPECTED OUTPUT */

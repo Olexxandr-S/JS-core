@@ -37,7 +37,9 @@ Write a function that:
 */
 
 function remove(array, index) {
-  // pavel: no implementation? :)
+  // pavel: no implementation? :)  i missed it
+  array.splice(index, 1);
+  return array;
 }
 
 /*
@@ -49,12 +51,11 @@ Write a function that:
 */
 
 function formatPercentage(arrayOfNumbers) {
-  return arrayOfNumbers
-    .map((number) => (number > 100 ? 100 : number))
-    // pavel: can we do it in just one Array.map() method? if there are 10 mln numbers, you gonna 'map' through them twice - not good :)
-    .map((number) => {
-      return Math.round(number * 100) / 100 + "%";
-    });
+  return arrayOfNumbers.map((number) => {
+    number > 100 ? (number = 100) : number;
+    return Math.round(number * 100) / 100 + "%";
+  });
+  // pavel: can we do it in just one Array.map() method? if there are 10 mln numbers, you gonna 'map' through them twice - not good :)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

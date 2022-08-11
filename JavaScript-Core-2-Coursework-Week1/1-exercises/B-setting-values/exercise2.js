@@ -16,8 +16,8 @@ let student = {
 */
 
 // write code here
-student.attendance = 90; // pavel: the task was adding new property with "Using bracket notation" :) 
-                         // so it should have been this: student["attendance"] = 90;
+student["attendance"] = 90;  // pavel: the task was adding new property with "Using bracket notation" :) 
+                             // so it should have been this: student["attendance"] = 90;
 console.log(student);
 
 /*
@@ -29,7 +29,7 @@ console.log(student);
 */
 
 // write code here
-student.hasPassed = student.attendance >= 90 && student.examScore >= 60;
+student.hasPassed = student.attendance >= 90 && student.examScore > 60;
 // pavel: cool, nice move of doing it without if-else, 
 // the only one small thing to correct here is the secong half of the condition:
 // 'exam score is above 60' - means '&& student.examScore > 60'

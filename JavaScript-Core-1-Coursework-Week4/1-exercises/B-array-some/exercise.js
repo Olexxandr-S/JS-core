@@ -12,7 +12,7 @@ let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 
-function items(array) {
+function arrayCheck(array) {
   return array === null;
 }
 
@@ -27,7 +27,7 @@ function items(array) {
 // - isSomthing()
 // for this task, the best name would be isNull()
 
-if (pairsByIndex.some(items) === true) {
+if (pairsByIndex.arrayCheck(items) === true) {
   process.exit(1);
 }
 // https://nodejs.org/api/process.html#process_process_exit_code

@@ -17,10 +17,10 @@ let everyone = [
 
 let firstFive = everyone.slice(0, 5); // complete this statement
 
-let lastFive = everyone.slice(2, 7); // complete this statement
+let lastFive = everyone.slice(-5, everyone.length); // complete this statement
 // this is ok, and correct.
 // there is still even better way to do it:
-// everyone.slice(-5, 7)  
+// everyone.slice(-5, 7)
 //  or
 // everyone.slice(-5, everyone.length) - this is the most preforable one
 

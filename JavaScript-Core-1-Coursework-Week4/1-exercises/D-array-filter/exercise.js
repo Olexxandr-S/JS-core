@@ -8,9 +8,11 @@
 
 let pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-let pairsByIndex = pairsByIndexRaw.filter((pair) => pair && pair.length === 2); // Complete this statement
+let pairsByIndex = pairsByIndexRaw.filter(
+  (pair) => Array.isArray(pair) && pair.length === 2
+); // Complete this statement
 
-// pavel: may i suggest 
+// pavel: may i suggest
 // replacing this: 'pair && pair.length === 2'
 // with this:      'Array.isArray(pair) && pair.length === 2'
 // :)
